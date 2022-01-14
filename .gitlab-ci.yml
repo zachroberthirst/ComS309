@@ -1,0 +1,107 @@
+# This file is a template, and might need editing before it works on your project.
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
+
+# This is a sample GitLab CI/CD configuration file that should run without any modifications.
+# It demonstrates a basic 3 stage CI/CD pipeline. Instead of real tests or scripts,
+# it uses echo commands to simulate the pipeline execution.
+#
+# A pipeline is composed of independent jobs that run scripts, grouped into stages.
+# Stages run in sequential order, but jobs within stages run in parallel.
+#
+# For more information, see: https://docs.gitlab.com/ee/ci/yaml/README.html#stages
+
+stages:          # List of stages for jobs, and their order of execution
+  - maventry
+  - maventest
+  - mavendeploy
+  - androidtry
+  - androidtest
+
+maven-build: #this is a JOB
+  stage: maventry
+  tags:
+    - springboot_tag #this is a LINK to the shell runner on our remote-server
+  script:
+    - cd Backend
+    - mvn package -B
+  only:
+    refs:
+      - main
+    changes:
+      - Backend/**/*
+  
+
+maven-test:
+  stage: maventest
+  tags: 
+    - springboot_tag
+  script:
+    - cd Backend
+    - mvn package
+    - mvn test
+  artifacts: 
+    paths:
+      - Backend/target/*.jar
+  only:
+    refs:
+      - main
+    changes:
+      - Backend/**/*
+
+
+android-build: #This is a seperate job for andriod
+  image: javiersantos/android-ci:latest #Used as a directive to the Docker
+  stage: androidtry
+  tags:
+   - android_tag
+  before_script:
+   - export GRADLE_USER_HOME=`pwd`/.gradle
+   - chmod +x ./Frontend/gradlew
+  script:
+   - cd Frontend
+   - ./gradlew assemble
+  artifacts:
+   paths:
+      - Frontend/app/build/outputs/
+  only:
+    refs:
+      - main
+    changes:
+      - Frontend/**/*
+  
+android-test:
+  image: javiersantos/android-ci:latest
+  stage: androidtest
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - chmod +x ./Frontend/gradlew
+  tags:
+    - android_tag
+  script:
+    - cd Frontend
+    - ./gradlew test
+  only:
+    refs:
+      - main
+    changes:
+      - Frontend/**/*
+
+autoDeploy:
+  stage: mavendeploy
+  tags:
+    - springboot_tag
+  script:
+    - cd Backend
+    - mvn package
+    - sudo mv target/*.jar /target/web-demo.jar
+    - sudo systemctl stop system-web-demo
+    - sudo systemctl start system-web-demo
+  only:
+    refs:
+      - main
+    changes:
+      - Backend/**/*
+

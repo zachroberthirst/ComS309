@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.bottomTabScreens.actorProfile.SettingsPageActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/preferences_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preferences: " />
+
+            <RelativeLayout
+                android:id="@+id/preferences_toggles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/preferences_text"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/dog_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Dogs" />
+
+                <CheckBox
+                    android:id="@+id/cat_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/dog_box"
+                    android:text="Cats" />
+
+                <CheckBox
+                    android:id="@+id/bird_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/cat_box"
+                    android:text="Birds" />
+
+                <CheckBox
+                    android:id="@+id/reptile_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/bird_box"
+                    android:text="Reptiles" />
+
+                <CheckBox
+                    android:id="@+id/rabbit_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dog_box"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Rabbits" />
+
+                <CheckBox
+                    android:id="@+id/fish_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dog_box"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/rabbit_box"
+                    android:text="Fish" />
+
+                <CheckBox
+                    android:id="@+id/ferret_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dog_box"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/fish_box"
+                    android:text="Ferrets" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/preferences_toggles"
+                android:layout_centerHorizontal="true">
+
+                <Button
+                    android:id="@+id/delete_account_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/submit_account_button"
+                    android:text="Delete Account"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/submit_account_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="40dp"
+                    android:text="Submit Changes" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Profile"/>
+
+    <item
+        android:id="@+id/nav_listings"
+        android:icon="@drawable/ic_baseline_wysiwyg_24"
+        android:title="Listings"/>
+
+    <item
+        android:id="@+id/nav_add_listing"
+        android:icon="@drawable/ic_baseline_edit_24"
+        android:title="Add Listing"/>
+
+</menu>

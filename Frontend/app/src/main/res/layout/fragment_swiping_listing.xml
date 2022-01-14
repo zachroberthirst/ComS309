@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.bottomTabScreens.SwipingListingFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true">
+        <RelativeLayout
+            android:id="@+id/picture_holder"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/pet_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ProgressBar
+                android:id="@+id/picture_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pet_name"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/picture_holder"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:autoSizeMaxTextSize="15sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/pet_age"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@+id/picture_holder"
+            android:layout_toRightOf="@+id/pet_name"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/pet_type"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@+id/picture_holder"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/pet_age"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/pet_description"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/pet_name"
+            android:padding="10dp"
+            android:autoSizeMaxTextSize="15sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeTextType="uniform"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

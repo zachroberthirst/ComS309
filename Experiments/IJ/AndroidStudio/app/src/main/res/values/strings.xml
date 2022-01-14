@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidStudioTesting</string>
+    <string name="counter">Counter</string>
+    <string name="ian_s_hello_world_program">Ian\'s Hello World Program</string>
+    <string name="back">Back</string>
+    <string name="increment_counter">++</string>
+    <string name="count_increment">--</string>
+</resources>

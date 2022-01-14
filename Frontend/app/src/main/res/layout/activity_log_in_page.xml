@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".view.logInScreen.LogInPageActivity">
+
+    <Button
+        android:id="@+id/logInPage_LogInButton"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:text="@string/log_in"
+        app:backgroundTint="#480DAF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/logInPage_Password_Layout"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/logInPage_Password_Layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.711" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/logInPage_Password_Layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        app:boxBackgroundColor="#31FFFFFF"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/logInPage_LogInButton"
+        app:layout_constraintEnd_toEndOf="@+id/logInPage_Username_Layout"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/logInPage_Username_Layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/logInPage_Password_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/logInPage_Username_Layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="#31FFFFFF"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/logInPage_Password_Layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.892">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/logInPage_Username_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/logInPage_NoAccount_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/don_t_have_an_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/logInPage_SignUp_Text"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logInPage_LogInButton"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <TextView
+        android:id="@+id/logInPage_ResetPassword_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:minHeight="48dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/reset_password"
+        android:textColor="#1A8377"
+        app:layout_constraintBottom_toBottomOf="@+id/logInPage_ForgotPassword_Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logInPage_ForgotPassword_Text"
+        app:layout_constraintVertical_bias="0.413"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/logInPage_ForgotPassword_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/logInPage_ResetPassword_Text"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logInPage_NoAccount_Text"
+        app:layout_constraintVertical_bias="0.288" />
+
+    <TextView
+        android:id="@+id/logInPage_SignUp_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:minHeight="48dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/sign_up"
+        android:textColor="#1A8377"
+        app:layout_constraintBottom_toBottomOf="@+id/logInPage_NoAccount_Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logInPage_NoAccount_Text"
+        app:layout_constraintVertical_bias="0.448"
+        android:focusable="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

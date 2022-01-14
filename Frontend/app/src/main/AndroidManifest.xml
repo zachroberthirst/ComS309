@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.frontend">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".model.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Pet Fin-der"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Frontend.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".view.bottomTabScreensShelter.listings.ShelterEditListingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomTabScreensShelter.listings.ShelterSelectedListingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.bottomTabScreensShelter.shelterProfile.ShelterProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.registrationScreen.TypeOfActorActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.registrationScreen.shelterRegistrationScreen.ShelterRegistrationActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".screens.CreateProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.logInScreens.PasswordResetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.AdminPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.bottomTabScreens.actorProfile.SettingsPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.bottomTabScreens.actorProfile.EditProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".screens.RecipientProfilePageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.bottomTabScreens.actorProfile.ActorsProfilePageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.chatScreens.ChatPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.bottomTabScreens.messagingScreen.MessagingPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.bottomTabScreens.PetSwipingPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.bottomTabScreensShelter.listings.ShelterListingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.bottomTabScreensShelter.listings.ShelterNewListingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.registrationScreen.userRegistrationScreen.AccountRegistrationPageActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".screens.SwipingPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.logInScreen.LogInPageActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.bottomTabScreens.actorProfile.ActorProfileFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="325dp">
+
+        <ProgressBar
+            android:id="@+id/page_progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"/>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/snippet_top_profilebar" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_layout1"
+            android:padding="16dp">
+
+
+            <RelativeLayout
+                android:id="@+id/image"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/image"
+                android:autoSizeMaxTextSize="18dp"
+                android:autoSizeMinTextSize="16dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:padding="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView14"
+                android:layout_alignStart="@+id/textView14"
+                android:layout_alignParentEnd="true"
+                android:text="Edit Profile" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:autoSizeMaxTextSize="25dp"
+                android:autoSizeMinTextSize="15dp"
+                android:text="Tagline: "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/textView15"
+                android:autoSizeMaxTextSize="25dp"
+                android:autoSizeMinTextSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView15"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:autoSizeMaxTextSize="25dp"
+                android:autoSizeMinTextSize="15dp"
+                android:text="Bio: "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView16"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/textView17"
+                android:autoSizeMaxTextSize="25dp"
+                android:autoSizeMinTextSize="15dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

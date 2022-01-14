@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.bottomTabScreensShelter.shelterProfile.ShelterProfileFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/page_progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"/>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                android:text="{shelter_name}"
+                android:id="@+id/shelter_name"
+                android:textStyle="bold"
+                android:autoSizeMaxTextSize="25sp"
+                android:autoSizeMinTextSize="20sp"
+                android:autoSizeTextType="uniform"
+                android:layout_alignParentTop="true"
+                android:textAlignment="center"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_shelter_button"
+                android:layout_below="@+id/shelter_name"
+                android:layout_centerHorizontal="true"
+                android:text="Edit Shelter Info"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

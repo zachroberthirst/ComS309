@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">frontend</string>
+    <string name="login">Log In</string>
+    <string name="full_name">Full Name…</string>
+    <string name="date_of_birth_mm_dd_yyyy">Date of Birth (MM/DD/YYYY)…</string>
+    <string name="email">Email…</string>
+    <string name="username">Username…</string>
+    <string name="password">Password…</string>
+    <string name="agree_to">Agree to</string>
+    <string name="create_account">Create Account</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="log_in">Log In</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="reset_password">Reset Password.</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_up">Sign Up.</string>
+    <string name="post">Post</string>
+    <string name="first_fragment">First Fragment</string>
+    <string name="second_fragment">Second Fragment</string>
+    <string name="third_fragment">Third Fragment</string>
+    <string name="chat_page">Chat Page</string>
+    <string name="back">Back</string>
+    <string name="chat_screen">Chat Screen</string>
+    <string name="messaging_page">messaging page</string>
+    <string name="view_profile">View Profile</string>
+    <string name="actor_s_profile">Actor\'s profile</string>
+    <string name="recipient_s_profile">Recipient\'s Profile</string>
+    <string name="pet_swiping_page">Pet Swiping Page</string>
+    <string name="settings">Settings</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="admin_page">Admin Page</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="submit">Submit</string>
+    <string name="which_best_describes_you">Which best describes you:</string>
+    <string name="looking_for_a_pet">Looking for a pet?</string>
+    <string name="click_here">Click Here.</string>
+    <string name="putting_a_pet_up_for_adoption">Putting a pet up for adoption?</string>
+    <string name="public_name">Public/Company name...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="more_options">More Options</string>
+    <string name="adorable_match">Adorable Match</string>
+    <string name="dislike">Dislike</string>
+    <string name="adorable">Adorable</string>
+    <string name="like">Like</string>
+    <string name="no_pets_found">Sorry no pets were found, try changing your filter settings.</string>
+    <string name="no_current_listings">No current listings.</string>
+    <string name="no_current_matches">No Current Matches.</string>
+    <string name="create_a_pet_listing">Create a Pet Listing!</string>
+    <string name="add_listing">Add Listing</string>
+    <string-array name="pet_types">
+        <item>DOG</item>
+        <item>CAT</item>
+        <item>BIRD</item>
+        <item>REPTILE</item>
+        <item>RABBIT</item>
+        <item>FISH</item>
+        <item>FERRET</item>
+    </string-array>
+
+
+</resources>
